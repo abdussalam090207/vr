@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Kamera VR</title>
+    <link rel="stylesheet" href="desain.css">
+
+</head>
+<body>
+    <div id="vr-container">
+        <div class="eye-view" id="left-eye">
+            <video class="video-feed" id="left-video" autoplay playsinline></video>
+            <div class="vr-lens"></div>
+        </div>
+        <div class="eye-view" id="right-eye">
+            <video class="video-feed" id="right-video" autoplay playsinline></video>
+            <div class="vr-lens"></div>
+        </div>
+        
+        <div class="controls">
+            <button class="control-btn" id="switch-camera">↻</button>
+            <button class="control-btn" id="toggle-fullscreen">⛶</button>
+        </div>
+        
+        <div class="loading" id="loading">
+            <h2>Mengakses kamera...</h2>
+        </div>
+        
+        <div class="error hidden" id="error">
+            <h2>Kamera tidak dapat diakses</h2>
+            <p>Pastikan Anda memberikan izin akses kamera dan perangkat Anda mendukung fitur ini.</p>
+            <button class="error-btn" id="retry">Coba Lagi</button>
+        </div>
+    </div>
+    <script src="fungsi.js"></script>
+</body>
+</html>
